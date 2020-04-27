@@ -85,7 +85,7 @@ base URL: ""
 
     - Visual Representation: 
     {
-        "name": "Here", <-- String  
+        "name": "Here", <-- String
         "price": "0.00$", <-- String
         "category": "Here", <-- String
         "location": "Here", <-- String

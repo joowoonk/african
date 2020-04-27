@@ -6,7 +6,7 @@
   "scripts": {
     "server": "nodemon",
     "start": "node",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,5 @@
     "jest": "^25.4.0",
     "nodemon": "^2.0.3",
     "supertest": "^4.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }

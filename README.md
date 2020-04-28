@@ -2,12 +2,12 @@
 
 Guidelines: "Make sure with all Post and Put Requests that you recreate the input id exactly as it is set up in the representation. The input body can be different, but IE This --> "name": "Here" has to be exact but "name": "Here" <-- Can be anything as long it is the same type of data (String/Integer)."
 
-base URL: ""
+base URL: "https://bw-african-marketplace-lucas.herokuapp.com/"
 
 ## Login/Register
 
 1. Register POST REQUEST
-    - URL: ""
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/auth/register"
     
     - Visual Representation: 
     {
@@ -19,7 +19,7 @@ base URL: ""
 2. Login POST REQUEST
     - Requirements: Login requires a Register first.
 
-    - URL: ""
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/auth/login"
     
     - Visual Representation: 
     {
@@ -30,7 +30,7 @@ base URL: ""
 ## User Endpoints
 
 1. User GET REQUEST
-    - URL: ""
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/users"
 
     - Visual Representation: 
     {
@@ -41,10 +41,10 @@ base URL: ""
     }
 
 2. User ID GET REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/users/:id" <-- Requires ID
 
 3. User PUT REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/users/:id" <-- Requires ID
     
     - Visual Representation: 
     {
@@ -54,7 +54,7 @@ base URL: ""
     }
 
 4. User DELETE REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/users/:id" <-- Requires ID
 
     - Visual Representation: 
     {
@@ -64,7 +64,7 @@ base URL: ""
 ## Marketplace Items Endpoints
 
 1. Items GET REQUEST
-    - URL: ""
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/items"
 
     - Visual Representation: 
     {
@@ -78,10 +78,10 @@ base URL: ""
     }
 
 2. Items ID GET REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/items/:id" <-- Requires ID
 
 3. Items POST REQUEST
-    - URL:""
+    - URL:"https://bw-african-marketplace-lucas.herokuapp.com/api/market/items"
 
     - Visual Representation: 
     {
@@ -93,7 +93,7 @@ base URL: ""
     }
 
 4. Items PUT REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/items/:id" <-- Requires ID
 
     - Visual Representation: 
     {
@@ -105,7 +105,7 @@ base URL: ""
     }
 
 5. Items DELETE REQUEST
-    - URL: "" <-- Requires ID
+    - URL: "https://bw-african-marketplace-lucas.herokuapp.com/api/market/items/:id" <-- Requires ID
 
     - Visual Representation: 
     {

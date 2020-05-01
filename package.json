@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon",
-    "start": "node",
-    "test": "jest"
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

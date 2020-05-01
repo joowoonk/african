@@ -2,36 +2,69 @@ const request = require("supertest");
 
 const server = require("./server.js")
 
-describe('server.js', function(){
-    describe('POST /api/auth/register', function(){
+let token
 
-        it('Should return a Status 201', async function(){
+describe('server.js', function(){
+
+    // describe('POST /api/auth/register', function(){
+
+    //     it('Should return a Status 201', async function(){
+    //         const res = await request(server)
+    //         .post('/api/auth/register')
+    //         .send({ username: "john", password: "john", name: 'john' })
+    //         expect(res.status).toBe(201)
+    //     })
+
+    //     it('Should return an object', async function(){
+    //         const res = await request(server)
+    //         .post('/api/auth/register')
+    //         expect(typeof res.body).toBe("object")
+    //     })
+    // })
+
+    // describe('POST /api/auth/login', async function(){
+
+    //     it('Should return a status 200', async function(){
+    //         const res = await request(server)
+    //         .post('/api/auth/login')
+    //         .send({ username: "JoHo", password: "Donny" })
+    //         expect(res.status).toBe(200)
+    //     })
+
+    //     it('Should return with JSON', async function(){
+    //         const res = await request(server)
+    //         .post('/api/auth/login')
+    //         expect(res.type).toMatch(/json/i)
+    //     })
+    // })
+
+    describe('PUT /api/market/users/:id', function(){
+        
+        it('Should return a status 400', async function(){
             const res = await request(server)
-            .post('/api/auth/register')
-            .send({ username: "JoHo", password: "Donny", name: 'Johnny' })
-            expect(res.status).toBe(201)
-            
+                .put('/api/market/users/:id')
+                expect(res.status).toBe(400)
         })
 
         it('Should return an object', async function(){
             const res = await request(server)
-            .post('/api/auth/register')
-            expect(typeof res.body).toBe("object")
+                .put('/api/market/users/:id')
+                expect(typeof res.body).toBe('object')
         })
     })
 
-    describe('POST /api/auth/login', function(){
-
-        it('Should return a status 200', async function(){
+    describe('DELETE /api/market/users/:id', function(){
+        
+            it('Should return a status 400', async function(){
             const res = await request(server)
-            .post('/api/auth/login')
-            .send({ username: "JoHo", password: "Donny" })
-            expect(res.status).toBe(200)
+                .del('/api/market/users/:id')
+                expect(res.status).toBe(400)
         })
 
-        it('Should return with JSON', async function(){
+
+        it('Should return with type JSON', async function(){
             const res = await request(server)
-            .post('/api/auth/login')
+            .del('/api/market/users/:id')
             expect(res.type).toMatch(/json/i)
         })
     })
@@ -46,7 +79,7 @@ describe('server.js', function(){
 
         it('Should return objects', async function(){
             const res = await request(server)
-            .post('/api/market/items')
+            .get('/api/market/items')
             expect(typeof res.body).toBe("object")
         })
     })

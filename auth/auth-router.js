@@ -13,7 +13,7 @@ router.post('/register', (req, res) => {
   Users.add(user)
     .then(saved => {
       console.log(user)
-      res.status(200).json(saved);
+      res.status(201).json(saved);
     })
     .catch(error => {
       console.log(user)
@@ -57,4 +57,7 @@ function generateToken(user){
   return jwt.sign(payload, jwtSecret, options)
 }
 
-module.exports = router;
+module.exports = {
+  router,
+  generateToken
+};

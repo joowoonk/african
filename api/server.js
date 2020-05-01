@@ -12,7 +12,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 
-server.use('/api/auth', authRouter);
+server.use('/api/auth', authRouter.router);
 server.use('/api/market', restricted, marketRouter);
 
 server.get("/", (req, res) => {

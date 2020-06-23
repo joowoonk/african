@@ -13,7 +13,7 @@ server.use(helmet());
 server.use(cors());
 
 server.use('/api/auth', authRouter.router);
-server.use('/api/market', restricted, marketRouter);
+server.use('/api/market', marketRouter);
 
 server.get("/", (req, res) => {
     res.status(200).json({ api: "up" });

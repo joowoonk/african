@@ -13,8 +13,11 @@ module.exports = {
     },
   },
   production: {
-    client: "pg",
-    connection: process.env.DATABASE_URL,
+    client: "sqlite3",
+    connection: {
+      filename: "./data/market.db3",
+    },
+    useNullAsDefault: true,
     migrations: {
       directory: "./data/migrations",
     },
@@ -28,6 +31,7 @@ module.exports = {
       filename: "./data/test.db3",
     },
     useNullAsDefault: true,
+
     migrations: {
       directory: "./data/migrations",
     },
